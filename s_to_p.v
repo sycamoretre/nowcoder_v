@@ -23,7 +23,7 @@ module s_to_p(
         if(!rst_n) cnt<=0;
         else if(valid_a && ready_a)
             cnt<=(cnt==3'd5)?0:(cnt+1'd1);
-        else cnt<=0;
+      // else cnt<=0; ////////////////////////////////删掉这行，cnt不要清零
     end
     
     always@(posedge clk or negedge rst_n)begin
